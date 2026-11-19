@@ -4,19 +4,13 @@
 #include <iostream>
 using namespace std;
 
-int largestDigit(int n);
+int commonFactors(int a, int b);
+int gcd(int a, int b);
 
 int main()
 {
-    int n; cin >> n;
-    cout << largestDigit(n);
+    int a, b; cin >> a >> b;
+
     return 0;
 }
 
-int largestDigit(int n)
-{
-    int x = n % 10;
-    n /= 10;
-    if ( n < 10 ) { return n;}
-    return x >= largestDigit(n) ? x : largestDigit(n);
-}
